@@ -29,12 +29,7 @@ function newton() {
       del4[i] = del3[i + 1] - del3[i];
 
     }
-    // var del = [del1[0],del2[0],del3[0],del4[0]];
-    // del[0] = del1[0];
-    // del[1] = del2[0];
-    // del[2] = del3[0];
-    // del[3] = del4[0];
-
+ 
     var fact = [];
     fact[0] = 1;
     for (let i = 1; i < 6; i++) {

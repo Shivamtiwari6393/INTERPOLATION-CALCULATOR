@@ -5,285 +5,59 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>INTERPOLATION CALCULATOR</title>
-  <style>
-    h1 {
-      padding: 20px;
-      margin: 1px;
-      background-color: #A4A4E0;
-      color: #112A46;
-      box-shadow: 0 6px 9px rgba(0, 6, 0, 0.4);
-      font-size: 50px;
-      width: auto;
-    }
-
-
-    body,
-    table {
-      width: 100%;
-      background-color: #ACC8E5;
-      text-align: center;
-      border: 2px;
-      border-radius: 20px;
-      border-collapse: collapse;
-      box-shadow: 0 11px 15px rgba(0, 0, 0, 0.9);
-    }
-
-    table,
-    thead,
-    th,
-    td {
-      padding: 10px;
-      border: 2px;
-      border-radius: 20px;
-      box-shadow: 0 6px 9px rgba(0, 6, 0, 0.4);
-
-    }
-
-    .inputy,
-    .inputx {
-      text-align: center;
-      padding: 3px;
-      margin: 2px;
-      border: 1px;
-      border-radius: 25px;
-      height: 80px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-      width: 100%;
-      font-size: 20px;
-      cursor: pointer;
-    }
-
-    a {
-      border: 1px;
-      padding: 10px;
-      margin: 5px;
-      color: 000000;
-      box-shadow: 0 6px 9px rgba(0, 6, 0, 0.4);
-      border-radius: 20px;
-      text-decoration: none;
-    }
-
-    nav {
-      padding: 20px;
-      margin: 2px;
-      border: 1px;
-      background-color: B5B6BA;
-      border-radius: 20px;
-      box-shadow: 0 6px 9px rgba(0, 6, 0, 0.4);
-    }
-
-    #b {
-      text-align: center;
-      padding: 3px;
-      margin: 2px;
-      border-radius: 5px;
-      height: 80px;
-    }
-
-    #F {
-      padding: 20px;
-      width: 46%;
-      border: 2px;
-      border-radius: 20px;
-      background-color: rgb(40, 168, 40);
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-      font-size: 25px;
-      font-family: Verdana, Geneva, Tahoma, sans-serif;
-      transition-duration: 0.2s;
-    }
-
-    #F:hover {
-
-      background-color: rgb(35, 162, 35);
-      color: white;
-      font-size: 20px;
-      width: 40%;
-
-
-    }
-
-
-    #T {
-      padding: 20px;
-      width: 46%;
-      border: 2px;
-      border-radius: 20px;
-      background-color: rgb(182, 69, 41);
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-      font-family: Verdana, Geneva, Tahoma, sans-serif;
-      font-size: 25px;
-      transition-duration: 0.2s;
-
-    }
-
-    #T:hover {
-
-      background-color: rgb(177, 64, 36);
-      color: white;
-      font-size: 20px;
-      box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-      width: 40%;
-    }
-
-    #point {
-      text-align: center;
-      padding: 3px;
-      margin: 15px;
-      border: 5px;
-      border-radius: 30px;
-      height: 80px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-      width: auto;
-      font-size: 20px;
-
-    }
-
-    #answer {
-      background-color: #fff;
-      text-align: center;
-      padding: 3px;
-      margin: 10px;
-      border: none;
-      border-radius: 30px;
-      height: 80px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    }
-  </style>
+  <script src="./index.js" defer></script>
+  <link rel="stylesheet" href="./index.css">
 
 </head>
 
 <body>
-  <form>
-
-    <h1>INTERPOLATION</h1>
-    <hr>
-    <br>
-    <nav>
-      <a href="#"><b>HOME </a>
-      <a href="#"><b>INTERPOLATE VALUE</a>
-      <a href="#"><b>PRACTICE QUESTIONS</a>
-      <a href="#"><b>ABOUT US</a>
-    </nav>
-    <br>
-    <hr>
-    <br>
-    <table align="center">
+  <form action="#">
+  <h2>INTERPOLATION</h2>
+  <nav>
+    <a href="/">HOME </a>
+    <a href="/">PRACTICE QUESTIONS</a>
+    <a href="/">ABOUT US</a>
+  </nav>
+  <div class="tablesection">
+    <table>
       <thead>
-        <th style="background-color:rgb(206, 137, 58)">X</th>
-        <th style="background-color:rgb(170, 140, 85)">Y</th>
+        <th class="x">X</th>
+        <th class="y">Y</th>
       </thead>
       <tbody>
         <tr>
-          <td><input type="number" class="inputx" placeholder="Enter value" id="myText"></td>
-          <td><input type="number" class="inputy" placeholder="Enter value"></td>
+          <td data-label="x"><input type="number" class="inputx" placeholder="Enter value" id="myText" ></td>
+          <td data-label="y"><input type="number" class="inputy" placeholder="Enter value"></td>
         </tr>
         <tr>
-          <td><input type="number" class="inputx" placeholder="Enter value"></td>
-          <td><input type="number" class="inputy" placeholder="Enter value"></td>
+          <td data-label="x"><input type="number" class="inputx" placeholder="Enter value" ></td>
+          <td data-label="y"><input type="number" class="inputy" placeholder="Enter value"></td>
         </tr>
         <tr>
-          <td><input type="number" class="inputx" placeholder="Enter value"></td>
-          <td><input type="number" class="inputy" placeholder="Enter value"></td>
+          <td data-label="x"><input type="number" class="inputx" placeholder="Enter value" ></td>
+          <td data-label="y"><input type="number" class="inputy" placeholder="Enter value"></td>
         </tr>
         <tr>
-          <td><input type="number" class="inputx" placeholder="Enter value"></td>
-          <td><input type="number" class="inputy" placeholder="Enter value"></td>
+          <td data-label="x"><input type="number" class="inputx" placeholder="Enter value" ></td>
+          <td data-label="y"><input type="number" class="inputy" placeholder="Enter value"></td>
         </tr>
         <tr>
-          <td><input type="number" class="inputx" placeholder="Enter value"></td>
-          <td><input type="number" class="inputy" placeholder="Enter value"></td>
+          <td data-label="x"><input type="number" class="inputx" placeholder="Enter value" ></td>
+          <td data-label="y"><input type="number" class="inputy" placeholder="Enter value"></td>
         </tr>
-
       </tbody>
-
-      <tfoot>
-        <tr>
-          <td id="b"><b>ANSWER</td>
-          <td id="answer"></td>
-        </tr>
-      </tfoot>
     </table>
-
-    <div>
-      <tr>
-        <td>
-
-          <input type="number" placeholder="ENTER THE POINT" id="point">
-
-        </td>
-
-      </tr>
-    </div>
-
-    <br>
-
-    <button type="button" id="F" onclick="myFunction()">SUBMIT</button>
-    <br>
-    <br>
-    <button type="reset" id="T">RESET</button>
-
-
-
-    <script>
-      function myFunction() {
-        var x = [];
-        for (let i = 0; i < 5; i++) {
-          x[i] = document.getElementsByClassName("inputx")[i].value;
-
-        }
-        var y = [];
-        for (let i = 0; i < 5; i++) {
-          y[i] = document.getElementsByClassName("inputy")[i].value;
-
-        }
-        var del1 = [];
-        for (let i = 0; i < 4; i++) {
-          del1[i] = y[i + 1] - y[i];
-
-        }
-        var del2 = [];
-        for (let i = 0; i < 3; i++) {
-          del2[i] = del1[i + 1] - del1[i];
-
-        }
-        var del3 = [];
-        for (let i = 0; i < 2; i++) {
-          del3[i] = del2[i + 1] - del2[i];
-
-        }
-        var del4 = [];
-        for (let i = 0; i < 1; i++) {
-          del4[i] = del3[i + 1] - del3[i];
-
-        }
-        var del = [];
-        del[0] = del1[0];
-        del[1] = del2[0];
-        del[2] = del3[0];
-        del[3] = del4[0];
-
-        var fact = [];
-        fact[0] = 1;
-        for (let i = 1; i < 6; i++) {
-
-          fact[i] = fact[i - 1] * (i + 1);
-        }
-        var point = document.getElementById("point").value;
-
-        var p1 = point - x[0];
-        var p = p1 / (x[1] - x[0]);
-
-        var sum = [];
-        sum[0] = y[0];
-        sum[1] = (del1[0] * p);
-        sum[2] = (del2[0] * p * (p - 1)) / 2;
-        sum[3] = (del3[0] * p * (p - 1) * (p - 2)) / 6;
-        sum[4] = (del4[0] * p * (p - 1) * (p - 2) * (p - 3)) / 24;
-        answer = 1 * (1 * sum[0] + 1 * sum[1] + 1 * sum[2] + 1 * sum[3] + 1 * sum[4]);
-        document.getElementById("answer").innerHTML = answer;
-      }
-    </script>
-  </form>
+  </div>
+  <div class="answer"><span id="value">Answer</span></div>
+  <div class="point">
+        <input type="number" placeholder="ENTER THE POINT" id="point-number">
+  </div>
+  <br>
+  <div class="buttons">
+    <button type="button" id="submit" onclick="newton()">SUBMIT</button>
+    <button type="reset" id="reset" onclick="clearanswer()">RESET</button>
+  </div>
+</form>
 </body>
 
 </html>
